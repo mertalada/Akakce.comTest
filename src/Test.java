@@ -70,6 +70,11 @@ public class Test {
 
             BekleVeKapat();
 
+            WebElement addogrumu=driver.findElement(By.xpath("//a[text()='TestUser']"));
+            if(addogrumu.getText().contains("TestUser"))
+                System.out.println("Test başarılı bir şekilde gerçekleşmiştir.");
+            else
+                System.out.println("Test başarısızdır.");
 
 
 
