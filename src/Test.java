@@ -1,6 +1,4 @@
-import Utility.BaseDriver;
 import Utility.MyFunction;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -8,8 +6,8 @@ import org.openqa.selenium.support.ui.Select;
 import static Utility.BaseDriver.BekleVeKapat;
 import static Utility.BaseDriver.driver;
 
-public class _01_HesapOlustur {
-        @Test
+public class Test {
+        @org.junit.Test
         public void Akakce() {
 
             driver.get("https://www.akakce.com/");
@@ -71,6 +69,12 @@ public class _01_HesapOlustur {
             MyFunction.Wait(1);
 
             BekleVeKapat();
+
+
+
+
+
+
 
 
         }
