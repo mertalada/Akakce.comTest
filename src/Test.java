@@ -119,6 +119,28 @@ public class Test {
         }
 
 
+        MyFunction.Wait(2);
+        WebElement benimSayfamM= driver.findElement(By.xpath("//div[@id='HM_v8']//i[1]"));
+        benimSayfamM.click();
+
+        MyFunction.Wait(2);
+        WebElement mesajKontrol= driver.findElement(By.xpath("//li[@class='order first']//a[2]"));
+        mesajKontrol.click();
+
+        MyFunction.Wait(2);
+        WebElement mesajSayfa= driver.findElement(By.xpath("//div[@class='wbb_v8']//p"));
+
+        String metinN="Listelenecek mesaj bulunamadı.";
+
+        if (mesajSayfa.getText().contains(metinN)){
+            System.out.println("Test PASSED ");
+            System.out.println("Mesaj Yok ");
+        }
+        else {
+            System.out.println("Test failed ");
+            System.out.println("Mesaj var ");
+        }
+
     }
 
 
