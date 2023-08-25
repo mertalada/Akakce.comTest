@@ -96,6 +96,29 @@ public class Test {
         grsYap.click();
 
 
+        MyFunction.Wait(2);
+        WebElement benimSayfam= driver.findElement(By.xpath("//div[@id='HM_v8']//i[1]"));
+        benimSayfam.click();
+
+        MyFunction.Wait(2);
+        WebElement siparisTiklama= driver.findElement(By.xpath("//li[@class='order first']//a[1]"));
+        siparisTiklama.click();
+
+        MyFunction.Wait(2);
+        WebElement siparisKontrol= driver.findElement(By.xpath("//div[@class='no-record']"));
+
+        String metin="Kayıtlı siparişiniz bulunmuyor.";
+
+        if (siparisKontrol.getText().contains(metin)){
+            System.out.println("Test PASSED ");
+            System.out.println("Sipariş Yok ");
+        }
+        else {
+            System.out.println("Test failed ");
+            System.out.println("Sipariş var ");
+        }
+
+
     }
 
 
