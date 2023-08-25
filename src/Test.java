@@ -141,6 +141,26 @@ public class Test {
             System.out.println("Mesaj var ");
         }
 
+        MyFunction.Wait(2);
+        WebElement bry=driver.findElement(By.xpath("//a[@title='Hesabım']"));
+        bry.click();
+
+        MyFunction.Wait(2);
+        WebElement Hesabim=driver.findElement(By.cssSelector("[href='/akakcem/']"));
+        Hesabim.click();
+
+        MyFunction.Wait(2);
+        WebElement HesabimSil=driver.findElement(By.cssSelector("[href='/akakcem/kullanici-bilgilerim/uyelik-iptali/']"));
+        HesabimSil.click();
+
+        MyFunction.Wait(2);
+        WebElement sifreyaz=driver.findElement(By.xpath("//input[@type='password']"));
+        sifreyaz.sendKeys("Testing.123");
+
+        MyFunction.Wait(2);
+        WebElement btnhesabimisil=driver.findElement(By.xpath("//input[@type='submit']"));
+        btnhesabimisil.click();
+
     }
 
 
