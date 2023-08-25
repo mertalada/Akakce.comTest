@@ -68,8 +68,8 @@ public class Test {
         hesapAcBox.click();
         MyFunction.Wait(1);
 
-        WebElement addogrumu = driver.findElement(By.xpath("//a[text()='TestUser']"));
-        if (addogrumu.getText().contains("TestUser")){
+        WebElement addogrumu = driver.findElement(By.xpath("//a[text()='Team']"));
+        if (addogrumu.getText().contains("Team")){
             System.out.println("Test başarılı bir şekilde gerçekleşmiştir.");
         }
         else {
@@ -77,14 +77,16 @@ public class Test {
         }
         MyFunction.Wait(1);
 
-         MyFunction.Wait(2);
-         WebElement hesabim=driver.findElement(By.xpath("//a[@title='Hesabım']"));
+         WebElement hesabim=driver.findElement(By.xpath("//*[@title='Hesabım']"));
          hesabim.click();
 
          WebElement cik=driver.findElement(By.cssSelector("[href='#Çık']"));
+         cik.click();
 
-        WebElement girisYap = driver.findElement(By.xpath("//*[@id='H_rl_v8']/a[2]"));
-        girisYap.click();
+        MyFunction.Wait(2);
+
+        WebElement girisyap=driver.findElement(By.cssSelector("[href='/akakcem/giris/']"));
+        girisyap.click();
 
         WebElement ePosta = driver.findElement(By.xpath("//*[@id='life']"));
         ePosta.sendKeys("testingteam4@outlook.com");
@@ -92,8 +94,8 @@ public class Test {
         WebElement sifre = driver.findElement(By.cssSelector("[type='password']"));
         sifre.sendKeys("Testing.123");
 
-        WebElement grsYap = driver.findElement(By.cssSelector("//input[@type='submit'])[2]"));
-        grsYap.click();
+        WebElement HesapgrsYap = driver.findElement(By.xpath("//*[@id='lfb']"));
+        HesapgrsYap.click();
 
 
         MyFunction.Wait(2);
