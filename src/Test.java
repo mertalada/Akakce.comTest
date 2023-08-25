@@ -77,7 +77,11 @@ public class Test {
         }
         MyFunction.Wait(1);
 
+         MyFunction.Wait(2);
+         WebElement hesabim=driver.findElement(By.xpath("//a[@title='Hesabım']"));
+         hesabim.click();
 
+         WebElement cik=driver.findElement(By.cssSelector("[href='#Çık']"));
 
         WebElement girisYap = driver.findElement(By.xpath("//*[@id='H_rl_v8']/a[2]"));
         girisYap.click();
