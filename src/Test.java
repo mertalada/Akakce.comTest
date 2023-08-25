@@ -78,6 +78,24 @@ public class Test {
 
 
 
+            driver.get("https://www.akakce.com");
+            MyFunction.Wait(1);
+
+            WebElement girisYap=driver.findElement(By.xpath("//*[@id=\"H_rl_v8\"]/a[2]"));
+            girisYap.click();
+
+            WebElement ePosta=driver.findElement(By.xpath("//*[@id=\"life\"]"));
+            ePosta.sendKeys("er.ondr@hotmail.com");
+
+            WebElement sifre= driver.findElement(By.cssSelector("#lifp"));
+            sifre.sendKeys("Technostudy1234");
+
+            WebElement grsYap= driver.findElement(By.cssSelector("#lfb"));
+            grsYap.click();
+
+            BekleVeKapat();
+
+            System.out.println("*********** KULLANICI GİRİŞİ BAŞARILI ************");
 
 
 
